@@ -6,7 +6,7 @@
 	Usage:		binary <source> <destination> <number>
 	Desc:		Converts numbers from one into another number system
 	Updated:	07.Dez.2012
-	Version:	1.0
+	Version:	1.0 
 ----------------------------------- */
 
 init($argv[1]);
