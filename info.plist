@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>action</key>
+	<false/>
+	<key>category</key>
+	<string>SCRIPTS</string>
+	<key>command</key>
+	<string>#Desc:	Converts numbers into other numberal systems
+#Use: 	nsc &lt;source&gt; &lt;destination&gt; &lt;number&gt;
+#Ex: 	nsc b d 1010
+#Ex:		nsc d b 1234
+
+#Source - Type of Number you want to convert
+#Number - Number you want to convert.
+#	(b - binary, d - decimal)
+
+
+php -f script.php -- {query} | pbcopy
+echo "Number is now ready in the clipboard"</string>
+	<key>disabled</key>
+	<false/>
+	<key>escapedollar</key>
+	<true/>
+	<key>escapequery</key>
+	<true/>
+	<key>escapequerybackquotes</key>
+	<true/>
+	<key>escapequerybrackets</key>
+	<true/>
+	<key>escapequeryquotes</key>
+	<true/>
+	<key>escapequerysemicolons</key>
+	<true/>
+	<key>growloutput</key>
+	<true/>
+	<key>growloutputsticky</key>
+	<false/>
+	<key>keyword</key>
+	<string>nsc</string>
+	<key>logging</key>
+	<false/>
+	<key>multifileargs</key>
+	<false/>
+	<key>parameter</key>
+	<integer>0</integer>
+	<key>silent</key>
+	<true/>
+	<key>subtitle</key>
+	<string>Converts numbers into other numberal systems</string>
+	<key>title</key>
+	<string>Number System Converter (NSC)</string>
+</dict>
+</plist>
