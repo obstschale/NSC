@@ -5,8 +5,8 @@
 	Author: 	Hans-Helge Bürger
 	Usage:		binary <source> <destination> <number>
 	Desc:		Converts numbers from one into another number system
-	Updated:	07.Dez.2012
-	Version:	1.0 
+	Updated:	10.Dez.2012 
+	Version:	1.1 
 ----------------------------------- */
 
 init($argv[1]);
@@ -38,7 +38,9 @@ switch ($q[0]) {
     case "h": //src is hexadeciaml
 		$num = hexadecimal($q[1], $q[2]);
         break;
-        
+
+    // @TODO: src is another number system
+    
 	default:
 		echo "Error 01: Wrong source parameter given.";
 }
@@ -61,7 +63,7 @@ switch ($des) {
 		
 	default:
 		return "Error 02: Wrong destination parameter given.";
-}
+	}
 }
 
 function decimal ($des, $num){
@@ -71,12 +73,21 @@ switch ($des) {
 		return decbin(trim($num));
 		break;
 	
-	case "h": //destination hexadecimal
+	case "h": //destination hexadecimal 
 		return dechex(trim($num));
 		break;
-		
+
 	default:
-		return "Error 02: Wrong destination parameter given.";
+		if ( is_numeric($des) ) {
+			// if a number is passed as destination type
+			// the number will be converted into number system
+			// with this number as base
+			
+			return numToNumSystem( $des, $num );
+
+		} else {
+			return "Error 02: Wrong destination parameter given.";
+	 }
 }
 }
 
@@ -94,6 +105,24 @@ switch ($des) {
 	default:
 		return "Error 02: Wrong destination parameter given.";
 }
+}
+
+/**
+ * numToNumSystem will converte a number into a not common number system.
+ * This function asumes that the number is allready a decimal number.
+ * If this number is not decimal it firstly has to be converted into decimal.
+ * @param  int $base   base of new number system
+ * @param  float $number number to convert
+ * @return int         converted number (same value but new number system)
+ */
+function numToNumSystem ( $base, $number ) {
+
+	while ( $number > 1 ) {
+		$convertedNumber = $number % $base . $convertedNumber;
+		$number = $number / $base;	
+	}
+
+	return $convertedNumber;
 }
 
 ?>
