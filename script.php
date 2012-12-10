@@ -3,8 +3,8 @@
 /* -----------------------------------
 	Script: 	Number System Converter
 	Author: 	Hans-Helge Bürger
-	Usage:		binary <source> <destination> <number>
-	Desc:		Converts numbers from one into another number system
+	Usage:		nsc <source> <destination> <number>
+	Desc:		  Converts numbers from one into another number system
 	Updated:	10.Dez.2012 
 	Version:	1.1 
 ----------------------------------- */
@@ -119,7 +119,7 @@ function numToNumSystem ( $base, $number ) {
 
 	while ( $number > 1 ) {
 		$convertedNumber = $number % $base . $convertedNumber;
-		$number = $number / $base;	
+		$number          = $number / $base;	
 	}
 
 	return $convertedNumber;
