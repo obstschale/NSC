@@ -5,8 +5,8 @@
 	Author: 	Hans-Helge Bürger
 	Usage:		nsc <source> <destination> <number>
 	Desc:		  Converts numbers from one into another number system
-	Updated:	10.Dez.2012 
-	Version:	1.2 
+	Updated:	12.Dez.2012 
+	Version:	1.3 
 ----------------------------------- */
 
 init($argv[1]);
@@ -25,65 +25,104 @@ function init ($q) {
 */
 $q = explode( " ", $q );
 
-//Determine source type
-switch ($q[0]) {
-  case "b": //src is binary
-		$num = binary($q[1], $q[2]);
-    break;
-      
-  case "d": //src is decimal
-		$num = decimal($q[1], $q[2]);
-    break;
-      
-  case "h": //src is hexadecimal
-		$num = hexadecimal($q[1], $q[2]);
-   	break;
+if ( $q[0] > 35 || $q[1] > 35 ) {
+	echo errorMessage(4) . "\n";
+} else {
 
-	default:
-		//src is not a common number system && is_numeric
-		if ( is_numeric($q[0]) ) {
-			
-			// calculate decimal number
-			// echo var_dump($q);
-			echo "Source: " . $q[2] . "\n";
-			$zahl =  numToDecimal( $q[0], $q[2] );
-			echo "Decimal: " . $zahl . "\n";
-			echo "Destination: " . numToNumSystem( $q[1],  $zahl) . "\n";
+	// make sure that source and destination letters are lower case
+	if ( is_string($q[0]) || is_string($q[1]) ) {
+		ucfirst($q[0]);
+		ucfirst($q[1]);
+	}
 
-		} else {
-			return errorMessage(1);
-		}
+	// Determine source type
+	switch ($q[0]) {
+	  case 'b': //src is binary
+			$num = binary($q[1], $q[2]);
+	    break;
+
+	   case 'o': //src is octal
+	   	$num = numToNumSystem( $q[1], numToDecimal( $q[0], $q[2] ) );
+	   	break;
+	      
+	  case 'd': //src is decimal
+			$num = decimal($q[1], $q[2]);
+	    break;
+	      
+	  case 'h': //src is hexadecimal
+			$num = hexadecimal($q[1], $q[2]);
+	   	break;
+		
+		default:
+			//src is not a common number system && is_numeric
+			if ( is_numeric($q[0]) ) {
+				
+				// calculate decimal number
+				$num = numToNumSystem( $q[1], numToDecimal( $q[0], $q[2] ) );
+				
+				// echo "Source: " . $q[2] . "\n";
+				// $zahl =  numToDecimal( $q[0], $q[2] );
+				// echo "Decimal: " . $zahl . "\n";
+				// echo "Destination: " . numToNumSystem( $q[1],  $zahl) . "\n";
+
+			} else {
+				$num = errorMessage(1);
+			}
+	}
+
+	//Return the the number 
+	echo $num . "\n";
 }
-
-//Return the the number 
-echo $num . "\n";
-
 }
 
 function binary ($des, $num){
 //Determine destination type
 switch ($des) {
-	case "d": //destination decimal
+	case 'b': //destination is the same like source
+		return $num;
+		break;
+
+	case 'o': //destination octal
+		return numToNumSystem( $des, numToDecimal( 2, $num ) );
+		break;
+
+	case 'd': //destination decimal
 		return bindec(trim($num));
 		break;
 	
-	case "h": //destination hexadecimal
+	case 'h': //destination hexadecimal
 		return bin2hex(trim($num));
 		break;
 		
 	default:
+		if ( is_numeric($des) ) {
+			// if a number is passed as destination type
+			// the number will be converted into number system
+			// with this number as base
+			
+			return numToNumSystem( $des, numToDecimal( 2, $num ) );
+		} else {
 		return errorMessage(2);
 	}
+}
 }
 
 function decimal ($des, $num){
 //Determine destination type
 switch ($des) {
-	case "b": //destination binary
+	case 'b': //destination binary
 		return decbin(trim($num));
 		break;
+
+	case 'o': //destination octal
+		return numToNumSystem( $des, $num );
+		break;
+
+	case 'd': //destination is the same like source
+		return $num;
+		break;
 	
-	case "h": //destination hexadecimal 
+	case 'h': //destination hexadecimal 
 		return dechex(trim($num));
 		break;
 
@@ -104,16 +143,33 @@ switch ($des) {
 function hexadecimal ($des, $num){
 //Determine destination type
 switch ($des) {
-	case "b": //destination binary
+	case 'd': //destination binary
 		return hex2bin(trim($num));
 		break;
+
+	case 'o': //destination octal
+		return numToNumSystem( $des, numToDecimal( 16, $num ) );
+		break;
 	
-	case "d": //destination decimal
+	case 'd': //destination decimal
 		return hexdec($num);
 		break;
 
+	case 'h': //destination is the same like source
+		return $num;
+		break;
+
 	default:
-		return errorMessage(2);
+		if ( is_numeric($des) ) {
+			// if a number is passed as destination type
+			// the number will be converted into number system
+			// with this number as base
+			
+			return numToNumSystem( $des, numToDecimal( 16, $num ) );
+
+		} else {
+			return errorMessage(2);
+	 }
 }
 }
 
@@ -126,6 +182,11 @@ switch ($des) {
  * @return int         converted number (same value but new number system)
  */
 function numToNumSystem ( $base, $number ) {
+
+	// If Base is a letter it will be converted into a integer
+	// b = 2; o = 8; d = 10; h = 16;
+	if ( !is_numeric($base) )
+		$base = convertBaseToInt($base);
 
 	while ( $number > 1 ) {
 		$convertedNumber = digitToLetter($number % $base) . $convertedNumber;
@@ -142,6 +203,13 @@ function numToNumSystem ( $base, $number ) {
  * @return int         number as decimal number
  */
 function numToDecimal ( $base, $number ) {
+
+	// If Base is a letter it will be converted into a integer
+	// b = 2; o = 8; d = 10; h = 16;
+	if ( !is_numeric($base) ) {
+		$base = convertBaseToInt($base);
+	}
+
 	// separate digits by using it as string
 	// with string length we know how to calculate
 	// the decimal number
@@ -151,7 +219,7 @@ function numToDecimal ( $base, $number ) {
 	{
 	   // calculation of decimal number
 	   // with power method
-	   $dec += pow($base, ($len-1)-$j) * $number[$j];
+	   $dec += pow($base, ($len-1)-$j) * letterToDigit($number[$j]);
 	}
 	
 	return $dec;
@@ -171,6 +239,18 @@ function errorMessage ( $errNum ) {
 
 		case '2':
 			return "Error 02: Wrong destination parameter given.";
+			break;
+
+		case '3':
+			return "Error 03: I don't know this letter, bro.";
+			break;
+
+		case '4':
+			return "Error 04: I'm really sorry, but I cannot deal with number systems larger than base 35.";
+			break;
+
+		case '5':
+			return "Error 05: I don't know this base. Please use a integer or b(inary), o(ctal), d(ecimal) or h(exadecimal) as base.";
 			break;
 		
 		default:
@@ -298,7 +378,157 @@ function digitToLetter ( $dig ) {
 				break;
 		}
 	}
-	
+}
+
+/**
+ * converts letter in a equivalent digit
+ * @param  char $let letter to convert
+ * @return int      digit
+ */
+function letterToDigit ( $let ) {
+	if ( is_numeric($let) ) {
+		return $let;
+	}	else {
+		$let = ucwords($let);
+		switch ($let) {
+			case 'A':
+				return '10';
+				break;
+			
+			case 'B':
+				return '11';
+				break;
+			
+			case 'C':
+				return '12';
+				break;
+			
+			case 'D':
+				return '13';
+				break;
+			
+			case 'E':
+				return '14';
+				break;
+			
+			case 'F':
+				return '15';
+				break;
+			
+			case 'G':
+				return '16';
+				break;
+
+			case 'H':
+				return '17';
+				break;
+
+			case 'I':
+				return '18';
+				break;
+
+			case 'J':
+				return '19';
+				break;
+
+			case 'K':
+				return '20';
+				break;
+
+			case 'L':
+				return '21';
+				break;
+
+			case 'M':
+				return '22';
+				break;
+
+			case 'N':
+				return '23';
+				break;
+
+			case 'O':
+				return '24';
+				break;
+
+			case 'P':
+				return '25';
+				break;
+
+			case 'Q':
+				return '26';
+				break;
+
+			case 'R':
+				return '27';
+				break;
+
+			case 'S':
+				return '28';
+				break;
+
+			case 'T':
+				return '29';
+				break;
+
+			case 'U':
+				return '30';
+				break;
+
+			case 'V':
+				return '31';
+				break;
+
+			case 'W':
+				return '32';
+				break;
+
+			case 'X':
+				return '33';
+				break;
+
+			case 'Y':
+				return '34';
+				break;
+
+			case 'Z':
+				return '35';
+				break;
+
+			default:
+				return errorMessage(3);
+				break;
+		}
+	}
+}
+
+/**
+ * converts letters into number for common number system, like binary, octal, decimal or hexadecimal
+ * @param  char $base base as letter
+ * @return int       equivalent integer
+ */
+function convertBaseToInt ($base) {
+	switch ($base) {
+		case 'b':
+			return 2;
+			break;
+		
+		case 'o':
+			return 8;
+			break;
+
+		case 'd':
+			return 10;
+			break;
+
+		case 'h':
+			return 16;
+			break;
+
+		default:
+			return errorMessage(5);
+			break;
+	}
 }
 
 ?>

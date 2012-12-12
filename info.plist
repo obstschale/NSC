@@ -12,9 +12,10 @@
 #Ex: 	nsc b d 1010
 #Ex:		nsc d b 1234
 
-#Source - Type of Number you want to convert
+#Source - Base of number you want to convert
+#Destination - Base of number system you want to convert to
 #Number - Number you want to convert.
-#	(b - binary, d - decimal)
+#	(b - binary, o - octal, d - decimal, h - hex, int up to 35)
 
 
 php -f script.php -- {query} | pbcopy
