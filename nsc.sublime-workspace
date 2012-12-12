@@ -1,0 +1,369 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"er",
+				"errNum"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"Vok",
+				"VokalAnzahl"
+			],
+			[
+				"An",
+				"AnzahlZchn"
+			],
+			[
+				"Anza",
+				"AnzahlVokale"
+			],
+			[
+				"print",
+				"print_reversed_string"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"my",
+				"myReadFile"
+			],
+			[
+				"cl",
+				"close"
+			],
+			[
+				"m",
+				"main	main()"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 247.0,
+		"selected_items":
+		[
+			[
+				"git ad",
+				"Git: Add..."
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"pack list",
+				"Package Control: List Packages"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"j",
+				"Set Syntax: JSON"
+			],
+			[
+				"syn xml",
+				"Set Syntax: XML"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"gitad",
+				"Git: Add..."
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"gistop",
+				"Gist: Open Gist"
+			],
+			[
+				"gist op",
+				"Gist: Open Gist"
+			],
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"synphp",
+				"Set Syntax: PHP"
+			],
+			[
+				"fetch",
+				"Fetch: Package"
+			],
+			[
+				"syhtml",
+				"Set Syntax: HTML"
+			],
+			[
+				"packremo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"synxml",
+				"Set Syntax: XML"
+			],
+			[
+				"git statu",
+				"Git: Status"
+			],
+			[
+				"git h",
+				"Git: Commit history"
+			],
+			[
+				"git",
+				"Git: Commit history"
+			],
+			[
+				"ja",
+				"Set Syntax: Java"
+			],
+			[
+				"jav",
+				"Set Syntax: Java"
+			],
+			[
+				"",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"mai",
+				"Snippet: main()"
+			],
+			[
+				"syntax Lat",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"Set S json",
+				"Set Syntax: JSON"
+			],
+			[
+				"Snippet: l",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 576.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/info.plist",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/.DS_Store",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/kudos.plist",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/.gitignore",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/nsc.alfredextension",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/script.php",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/nsc.sublime-project",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/nsc.sublime-workspace",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/BracketHighlighter/readme.md",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/Alignment/readme.creole",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/User/Gist.sublime-settings",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/bin/test/file.php",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/AdvancedNewFile/README.md",
+		"/Users/RetinaObst/Library/Application Support/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/.git/hooks/post-receive",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/.git/hooks/post-commit",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/.git/hooks/README.sample",
+		"/Users/RetinaObst/Documents/Code/github/Number System Converter (NSC)/.git/config",
+		"/Users/RetinaObst/Documents/Code/github/CanvasPong/README.md",
+		"/Users/RetinaObst/Documents/ICF Stuttgart/PR Ministry/Web/Ladys Conference/LC13/LC13-Webpage/README.md",
+		"/Users/RetinaObst/Documents/ICF Stuttgart/PR Ministry/Web/Ladys Conference/LC13/LC13-Webpage/.gitignore",
+		"/private/var/folders/lv/6dqb1jv52q7690jkplhcr8c00000gn/T/a3a1daa4-9450-4f87-84ce-3c88920c0832/www/podcast/download.php",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet Compiler/listing/antlr.g",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet Compiler/listing/jcup.cup",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet Compiler/listing/j.txt",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet Compiler/listing/driver-antlr.java",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet Compiler/listing/jfelx.jflex",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet/listing/driver-antlr.java",
+		"/Users/RetinaObst/Documents/DHBW/FS/Cheat Sheet/listing/antlr.g",
+		"/Users/RetinaObst/Desktop/Meine Notizen/Sprache.html",
+		"/Users/RetinaObst/Desktop/Meine Notizen/Teil 5: Funktionale Abhängigkeit und Normalformen.html",
+		"/Users/RetinaObst/Dropbox/DHBW/TINF11A/Scripte/3. Semester/Betriebssysteme/test-ffmpeg/Application.mk",
+		"/Users/RetinaObst/Documents/Samba Files/dir.txt",
+		"/Users/RetinaObst/Dropbox/DHBW/TINF11A/Scripte/3. Semester/Theoretische Informatik III/Interpreter/Simple.g",
+		"/Users/RetinaObst/Dropbox/DHBW/SWE Assignments/Assignment3/TeX3/Makefile",
+		"/private/var/folders/lv/6dqb1jv52q7690jkplhcr8c00000gn/T/0edf9971-a1c2-442e-b3eb-e8f8a6a1fbb5/wp-content/themes/tewis/functions.php",
+		"/Users/RetinaObst/Documents/DHBW/SWE/[13] SQ-3 (Methods)/Kontrollflussgraph/graph.cpp",
+		"/Users/RetinaObst/Documents/DHBW/OS/cpp/fileop.cpp",
+		"/Users/RetinaObst/Downloads/user.ini",
+		"/Users/RetinaObst/Documents/DHBW/OS/cpp/reverse.cpp",
+		"/Users/RetinaObst/Desktop/Zeitmaschine/Kurse/Programming/basic programming/filecard.c",
+		"/Users/RetinaObst/Documents/DHBW/OS/cpp/helloworld.cpp",
+		"/Users/RetinaObst/Downloads/lightbox/js/jquery-1.7.2.min.js",
+		"/Users/RetinaObst/Downloads/lightbox/README.markdown",
+		"/Users/RetinaObst/Documents/Scripts/Alfred Extension/Number System Converter (NSC)/script.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"description",
+			"type",
+			"description",
+			"type",
+			"description",
+			"]\n",
+			"type",
+			"descript",
+			"number"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"nsc",
+				"nsc.sublime-project"
+			],
+			[
+				"sc",
+				"script.php"
+			],
+			[
+				"10",
+				"10000000 128"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 237.0,
+	"status_bar_visible": true
+}
