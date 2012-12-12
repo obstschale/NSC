@@ -11,6 +11,11 @@
 
 init($argv[1]);
 
+/**
+ * init explodes the given parameter into an array and decides what to do. Whether to calculate or to throw an error.
+ * @param  string $q string passed by Alfred
+ * @return string    this is not a real return only a echo which is piped into pbcopy.
+ */
 function init ($q) {
 /* 
 	This init function runs first and analysis all parameters
@@ -75,6 +80,12 @@ if ( $q[0] > 35 || $q[1] > 35 ) {
 }
 }
 
+/**
+ * if a 'b' is enterd as source this funtion decides how to calculate the new number
+ * @param  string $des either it is a string or a integer. Base of new number system
+ * @param  int $num number to convert
+ * @return int      converted number
+ */
 function binary ($des, $num){
 //Determine destination type
 switch ($des) {
@@ -107,6 +118,12 @@ switch ($des) {
 }
 }
 
+/**
+ * if a 'd' is enterd as source this funtion decides how to calculate the new number
+ * @param  string $des either it is a string or a integer. Base of new number system
+ * @param  int $num number to convert
+ * @return int      converted number
+ */
 function decimal ($des, $num){
 //Determine destination type
 switch ($des) {
@@ -140,6 +157,12 @@ switch ($des) {
 }
 }
 
+/**
+ * if a 'h' is enterd as source this funtion decides how to calculate the new number
+ * @param  string $des either it is a string or a integer. Base of new number system
+ * @param  int $num number to convert
+ * @return int      converted number
+ */
 function hexadecimal ($des, $num){
 //Determine destination type
 switch ($des) {
