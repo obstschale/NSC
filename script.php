@@ -166,7 +166,7 @@ switch ($des) {
 function hexadecimal ($des, $num){
 //Determine destination type
 switch ($des) {
-	case 'd': //destination binary
+	case 'b': //destination binary
 		return hex2bin(trim($num));
 		break;
 
