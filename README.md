@@ -65,6 +65,7 @@ The following can be used as *source* or *destination*:
 * better function to replace digits with letters
 * add funtionality to base larger than 35 (any ideas are welcome)
 * display number instantly in Alfred (will probably work with Alfred 2.x)
+* convert floating numbers
 
 ---
 ## Licensing
