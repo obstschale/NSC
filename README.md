@@ -7,6 +7,11 @@
 **Version:** v1.3  
 **Licence:** [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)")
 
+## Quick Installation
+### Download [NSC v1.3](https://github.com/obstschale/Number-System-Converter--NSC-/raw/master/nsc-v1.3.alfredextension)
+Download the newest version and install it by double clicking it.
+
+---
 ## Introduction
 
 *NSC* is a little [Alfred](http://www.alfredapp.com/) extension to convert a number into another number system. I study computer science and therefore I daily deal with different number systems. The most common ones are probably `binary`, `octal`, `decimal`, and `hexadecimal` but I got tiered to calculate them by hand, calculator or a webpage. Alfred is only a key stroke away and so I started programming this extention.
