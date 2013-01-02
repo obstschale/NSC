@@ -9,7 +9,8 @@
 
 ## Quick Installation
 ### Download [NSC v1.3](https://github.com/obstschale/Number-System-Converter--NSC-/raw/master/nsc-v1.3.alfredextension)
-Download the newest version and install it by double clicking it.
+Either you download the newest version and install it by double clicking it or you download the [ZIP](https://github.com/obstschale/Number-System-Converter--NSC-/archive/master.zip) and install via drag'n'drop into the extension menu in Alfred.
+
 
 ---
 ## Introduction
