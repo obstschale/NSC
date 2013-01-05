@@ -5,8 +5,8 @@
 	Author: 	Hans-Helge Bürger
 	Usage:		nsc <source> <destination> <number>
 	Desc:		  Converts numbers from one into another number system
-	Updated:	12.Dez.2012 
-	Version:	1.3 
+	Updated:	05.January 2013 
+	Version:	1.4 
 ----------------------------------- */
 
 init($argv[1]);
