@@ -8,7 +8,7 @@
 **Licence:** [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)")
 
 ## Quick Installation
-### Download [NSC v1.3](https://github.com/obstschale/Number-System-Converter--NSC-/raw/master/nsc-v1.3.alfredextension)
+### Download [NSC v1.3](https://github.com/obstschale/Number-System-Converter--NSC-/raw/alfredextension/nsc-v1.4.alfredextension)
 Either you download the newest version and install it by double clicking it or you download the [ZIP](https://github.com/obstschale/Number-System-Converter--NSC-/archive/master.zip) and install via drag'n'drop into the extension menu in Alfred.
 
 
