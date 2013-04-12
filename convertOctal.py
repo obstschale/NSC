@@ -7,8 +7,17 @@ from nsc import createXML
 # create items element for Alfred
 items = etree.Element("items")
 
+# calculate decimal number
+decimal = int(sys.argv[1], 8)
+# create associative array and create xml from it
+d = {'uid':"decimal", 'arg':str(decimal), 'title':str(decimal), 'subtitle':"Decimal"}
+item = createXML(d)
+# append new item to items
+items.append(item)
+
+
 # calculate binary number
-binary = bin(int(sys.argv[1]))[2:]
+binary = bin(decimal)[2:]
 # create associative array and create xml from it
 b = {'uid':"binary", 'arg':binary, 'title':binary, 'subtitle':"Binary"}
 item = createXML(b)
@@ -16,17 +25,8 @@ item = createXML(b)
 items.append(item)
 
 
-# calculate octal number
-octal = oct(int(sys.argv[1]))[1:]
-# create associative array and create xml from it
-o = {'uid':"octal", 'arg':octal, 'title':octal, 'subtitle':"Octal"}
-item = createXML(o)
-# append new item to items
-items.append(item)
-
-
 # calculate hex number
-hexadec = hex(int(sys.argv[1]))[2:]
+hexadec = hex(decimal)[2:]
 # create associative array and create xml from it
 h = {'uid':"hexadec", 'arg':hexadec, 'title':hexadec, 'subtitle':"Hexdecimal"}
 item = createXML(h)
