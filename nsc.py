@@ -4,8 +4,8 @@
 	Author: 	Hans-Helge Buerger
 	Usage:		nsc <source> <number>
 	Desc:		  Converts numbers from one into another number system
-	Updated:	09.April 2013
-	Version:	2.0 
+	Updated:	12.April 2013
+	Version:	2.0dev 
 ----------------------------------- """
 
 from lxml import etree
@@ -22,5 +22,8 @@ def createXML(data):
 
 		subtitle = etree.SubElement(item, "subtitle")
 		subtitle.text = data['subtitle']
+
+		icon = etree.SubElement(item, "icon")
+		icon.text = data['icon']
 
 		return item
