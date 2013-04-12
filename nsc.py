@@ -24,6 +24,9 @@ def createXML(data):
 		subtitle.text = data['subtitle']
 
 		icon = etree.SubElement(item, "icon")
-		icon.text = data['icon']
+		if 'icon' in data:
+			icon.text = data['icon']
+		else:
+			icon.text = 'icon.png'
 
 		return item
