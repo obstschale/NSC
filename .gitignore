@@ -2,3 +2,5 @@
 icon/
 *.sublime-project
 *.sublime-workspace
+tasks.todo
+*.pyc
