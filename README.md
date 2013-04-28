@@ -9,6 +9,8 @@
 
 ## Quick Installation
 ### Download [NSC v2.0](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.0.alfredworkflow)
+###Requirements
+* lxml - A python library which can be install by `pip install lxml`
 
 
 ---
