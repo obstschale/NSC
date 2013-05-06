@@ -73,6 +73,7 @@ Another cool feature of Alfred 2 is that you can pass arguments to other parts o
 ### v2.01
 * bug: base 1 led into an infinite loop (thx to [@kevinlsw](https://github.com/kevinlsw) | [#2](https://github.com/obstschale/NSC/issues/2))
 * add: new int2base function which uses now letters as input/output within `convert`
+* add: NSC uses [alp](https://github.com/phyllisstein/alp) to generate XML feedback
 
 
 
