@@ -8,43 +8,48 @@
 """
 
 import sys
-from lxml import etree
-from nsc  import createXML
+import alp
+import string
+digs = string.digits + string.lowercase
 
-"""
-destSystem expects a decimal number and the base of new number system
-"""
-def destSystem(number, base):
-	convertedNumber = ""
 
-	while (number > 0):
-		convertedNumber = str(number % base) + convertedNumber;
-		number          = number / base
+def int2base(x, base):
+  if x < 0: sign = -1
+  elif x==0: return '0'
+  else: sign = 1
+  x *= sign
+  digits = []
+  while x:
+    digits.append(digs[x % base])
+    x /= base
+  if sign < 0:
+    digits.append('-')
+  digits.reverse()
+  return ''.join(digits)
 
-	return convertedNumber
 
-# create items element for Alfred
-items = etree.Element("items")
-
-if (len(sys.argv) == 4):
+if (len(sys.argv) == 4 and sys.argv[3] != "1"):
 	# calculate integer first
 	decimal = int(sys.argv[1], int(sys.argv[2]))
-	# create associative array and create xml from it
-	d = {'uid':"decimal", 'arg':str(decimal), 'title':str(decimal),	'subtitle':"Decimal", 'icon':'icons/decimal.png'}
-	item = createXML(d)
-	# append new item to items
-	items.append(item)
+	# create dictionary to create xml from it
+	decimalDic = dict(title=str(decimal), subtitle="Decimal", uid="decimal", valid=True, arg=str(decimal), icon="icons/decimal.png")
+	d = alp.Item(**decimalDic)
 
 	# calculate new number
-	conv = destSystem(decimal, int(sys.argv[3]))
-	# create associative array and create xml from it
-	c = {'uid':"conv", 'arg':conv, 'title':conv, 'subtitle':"Number to base " + sys.argv[3]}
-	item = createXML(c)
-	# append new item to items
-	items.append(item)
+	conv = int2base(decimal, int(sys.argv[3]))
+	# create dictionary to create xml from it
+	convertDic = dict(title=conv, subtitle="Number to base " + str(sys.argv[3]), uid="conv", valid=True, arg=conv)
+	c = alp.Item(**convertDic)
+
+	itemsList = [d, c]
+	alp.feedback(itemsList)
 
 else:
-	error_string = "<items><item arg='error' uid='error' valid='no'><title>Make sure to pass 3 numbers</title><subtitle>for help type \"nsc help\"</subtitle></item></items>"
-	items = etree.fromstring(error_string)
-
-print (etree.tostring(items, pretty_print=True, xml_declaration=True))
+	if (int(sys.argv[3]) == 1):
+		errorDic = dict(title="Base 1 makes no sense", subtitle="", uid="error", valid=False, arg="error")
+		error = alp.Item(**errorDic)
+		alp.feedback(error)
+	else:
+		errorDic = dict(title="Make sure to pass 3 numbers", subtitle="for help type \"nsc help\"", uid="error", valid=False, arg="error")
+		error = alp.Item(**errorDic)
+		alp.feedback(error)
