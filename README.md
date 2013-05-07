@@ -3,7 +3,7 @@
 * * * 
 
 **Author:** [Hans-Helge B&uuml;rger](http://www.hanshelgebuerger.de "Hans-Helge Bürger - Webpage")  
-**Date:** 05. January 2013	
+**Date:** 06. May 2013	
 **Version:** v2.01	
 **Licence:** [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)")
 
