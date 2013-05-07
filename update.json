@@ -1,5 +1,5 @@
 {
-    "version": 2.01,
-    "download_url": "https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.01.alfredworkflow",
-    "description": "Hotfix: Base 1 led into an infinite loop"
+    "version": 2.1,
+    "download_url": "https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.1.alfredworkflow",
+    "description": "add: convert upto base 62"
 }
