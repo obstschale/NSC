@@ -1,5 +1,5 @@
 {
     "version": 2.1,
-    "download_url": "https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.1.alfredworkflow",
-    "description": "add: convert upto base 62"
+    "download_url": "https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.2.alfredworkflow",
+    "description": "Showing binary and hex in a more friendly way"
 }
