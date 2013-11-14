@@ -68,6 +68,11 @@ Another cool feature of Alfred 2 is that you can pass arguments to other parts o
 ---
 
 ## Changelog
+### v2.2
+* add: display binary numbers w/ at least 8 digits
+* add: display hex in uppercase
+thx to [akupila](https://github.com/akupila)
+
 ### v.2.1
 * add: conversion upto base 62 (case-sensitive letters if base is greater than 35)
 * add: add info.plist to repo
@@ -77,8 +82,6 @@ Another cool feature of Alfred 2 is that you can pass arguments to other parts o
 * bug: base 1 led into an infinite loop (thx to [@kevinlsw](https://github.com/kevinlsw) | [#2](https://github.com/obstschale/NSC/issues/2))
 * add: new int2base function which uses now letters as input/output within `convert`
 * add: NSC uses [alp](https://github.com/phyllisstein/alp) to generate XML feedback
-
-
 
 ### v2.0
 * NSC is now an Alfred Workflow and works with Alfred 2
