@@ -8,7 +8,7 @@
 **Licence:** [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)")
 
 ## Quick Installation
-### Download [NSC v2.1](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.1.alfredworkflow)
+### Download [NSC v2.2](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.2.alfredworkflow)
 
 
 ---
