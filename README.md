@@ -1,14 +1,14 @@
 # NSC
 *Number System Converter -- an [Alfred](http://www.alfredapp.com/) extension*
-* * * 
+* * *
 
 **Author:** [Hans-Helge B&uuml;rger](http://www.hanshelgebuerger.de "Hans-Helge Bürger - Webpage")  
-**Date:** 07. May 2013	
-**Version:** v2.1	
+**Date:** 04. December 2015  
+**Version:** v2.3  
 **Licence:** [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)")
 
 ## Quick Installation
-### Download [NSC v2.2](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.2.alfredworkflow)
+### Download [NSC v2.3](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.3.alfredworkflow)
 
 
 ---
@@ -63,11 +63,14 @@ Another cool feature of Alfred 2 is that you can pass arguments to other parts o
 
 * `hex FF2` → result: D: 4082 // B: 111111110010 // O: 7762
 
-* `convert 119 11 3` → result: D: 141 // Base 3: 12020 
+* `convert 119 11 3` → result: D: 141 // Base 3: 12020
 
 ---
 
 ## Changelog
+### v2.3
+* add: `+` and `/` to alphabeth for converting up to base 64. Props to @sycrat #4
+
 ### v2.2
 * add: display binary numbers w/ at least 8 digits
 * add: display hex in uppercase
@@ -76,7 +79,7 @@ thx to [akupila](https://github.com/akupila)
 ### v.2.1
 * add: conversion upto base 62 (case-sensitive letters if base is greater than 35)
 * add: add info.plist to repo
-* add: all scripts uses now [alp](https://github.com/phyllisstein/alp) to generate XML feedback 
+* add: all scripts uses now [alp](https://github.com/phyllisstein/alp) to generate XML feedback
 
 ### v2.01
 * bug: base 1 led into an infinite loop (thx to [@kevinlsw](https://github.com/kevinlsw) | [#2](https://github.com/obstschale/NSC/issues/2))
