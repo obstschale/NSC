@@ -327,7 +327,7 @@ The most common ones are the decimal, binary, octal and hexadecimal. But NSC als
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.3</string>
+	<string>2.4</string>
 	<key>webaddress</key>
 	<string>http://hanshelgebuerger.de</string>
 </dict>

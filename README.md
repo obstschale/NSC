@@ -2,13 +2,13 @@
 *Number System Converter -- an [Alfred](http://www.alfredapp.com/) extension*
 * * *
 
-**Author:** [Hans-Helge B&uuml;rger](http://www.hanshelgebuerger.de "Hans-Helge Bürger - Webpage")  
-**Date:** 04. December 2015  
-**Version:** v2.3  
+**Author:** [Hans-Helge B&uuml;rger](http://www.hanshelgebuerger.de "Hans-Helge Bürger - Webpage")
+**Date:** 29. March 2017
+**Version:** v2.4
 **Licence:** [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)")
 
 ## Quick Installation
-### Download [NSC v2.3](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.3.alfredworkflow)
+### Download [NSC v2.4](https://github.com/obstschale/NSC/raw/alfredextension/nsc-v2.4.alfredworkflow)
 
 
 ---
@@ -68,6 +68,9 @@ Another cool feature of Alfred 2 is that you can pass arguments to other parts o
 ---
 
 ## Changelog
+### v2.4
+* enhancement: add version to `info.plist`. Props to @bbezanson #5 #6
+
 ### v2.3
 * add: `+` and `/` to alphabeth for converting up to base 64. Props to @sycrat #4
 
