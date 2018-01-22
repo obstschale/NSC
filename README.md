@@ -121,4 +121,4 @@ thx to [akupila](https://github.com/akupila)
 ---
 ## Licensing
 
-I'm a huge fan of *CreativeCommons* and so it's my first choice for licensing. I choose the [**CC BY 3.0**](http://creativecommons.org/licenses/by/3.0/ "Attribution 3.0 Unported (CC BY 3.0)") so you can use it for free. It's also allowed to adapt the work, for an own tutorial or a new game. But if you use it link to the tutorial.
+See [LICENSE](LICENSE)
