@@ -23,4 +23,13 @@ hexDic = dict(title=str(hexadec), subtitle="Hexadecimal", uid="hex", valid=True,
 h = alp.Item(**hexDic)
 
 itemsList = [b, o, h]
+
+# calculate negative number
+tc = alp.decimal2negative(int(sys.argv[1]))
+if (tc < 0):
+    # create associative array and create xml from it
+    tcDic = dict(title=str(tc), subtitle="2's complement negative after trimming the zeros before the most significant bit", uid="negative", valid=True, arg=str(tc), icon="icons/decimal.png")
+    t = alp.Item(**tcDic)
+    itemsList += [t]
+
 alp.feedback(itemsList)

@@ -23,4 +23,13 @@ octalDic = dict(title=str(octal), subtitle="Octal", uid="octal", valid=True, arg
 o = alp.Item(**octalDic)
 
 itemsList = [d, b, o]
+
+# calculate negative number
+tc = alp.decimal2negative(decimal)
+if (tc < 0):
+    # create associative array and create xml from it
+    tcDic = dict(title=str(tc), subtitle="2's complement negative after trimming the zeros before the most significant bit", uid="negative", valid=True, arg=str(tc), icon="icons/decimal.png")
+    t = alp.Item(**tcDic)
+    itemsList += [t]
+
 alp.feedback(itemsList)
