@@ -16,11 +16,12 @@
 
 *NSC* is a little [Alfred](http://www.alfredapp.com/) workflow to convert a number into another number system. I study computer science and therefore I daily deal with different number systems. The most common ones are probably `binary`, `octal`, `decimal`, and `hexadecimal` but I got tiered to calculate them by hand, calculator or a webpage. Alfred is only a key stroke away and so I started programming this workflow.
 
-I started to learn Python and to pratice that the new Alfred 2 workflow is written in Python insteed of PHP. You know, only if you use a language you get better ;) So your welcome to send a pull request if you have any improvement done.
+
+I started to learn Python and to pratice that the new Alfred 2 workflow is written in Python. So your welcome to send a pull request if you have any improvement done.
 
 ## Functions
 
-Like I mentioned above, you can convert numbers. In the first version I implemented `binary`, `decimal`, and `hexadecimal`. And you can even convert any number from any system into another. But be warned: I didn't implemented a _letter-replacement-function_ which would display the number _10_ with an _A_. I will definitely do this soon, but in this first version I had other problems (especially to get started with Python :) )
+Like I mentioned above, you can convert numbers. In the first version I implemented `binary`, `decimal`, and `hexadecimal`. And you can even convert any number from any system into another.
 
 ## Usage
 
