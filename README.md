@@ -1,4 +1,4 @@
-I've upgrade scripts to use `Python 3` because macOS 12.3 dropped `Python 2`.
+I've upgraded scripts to use `Python 3` because macOS 12.3 dropped `Python 2`. And I prefer to use a short version of commands like `dec` and `bin`.
 
 # NSC
 *Number System Converter -- an [Alfred](http://www.alfredapp.com/) extension*
