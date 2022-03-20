@@ -62,12 +62,12 @@ def feedback(items):
 
         data = item.get()
 
-        for (k, v) in data["attrib"].iteritems():
+        for (k, v) in data["attrib"].items():
             if v is None:
                 continue
             itemToAdd.set(k, v)
 
-        for (k, v) in data["content"].iteritems():
+        for (k, v) in data["content"].items():
             if v is None:
                 continue
             if k != "fileIcon" and k != "fileType":
@@ -87,4 +87,4 @@ def feedback(items):
     else:
         processItem(items)
 
-    print ET.tostring(feedback, encoding="utf-8")
+    print(ET.tostring(feedback, encoding="utf-8"))
