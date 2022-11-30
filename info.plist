@@ -120,11 +120,11 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>octal</string>
+				<string>oct</string>
 				<key>runningsubtext</key>
 				<string>converting ...</string>
 				<key>script</key>
-				<string>python convertOctal.py {query} 2&gt;&amp;1 | tee nsc.log</string>
+				<string>python3 convertOctal.py {query} 2&gt;&amp;1 | tee nsc.log</string>
 				<key>subtext</key>
 				<string>Type any octal number</string>
 				<key>title</key>
@@ -151,7 +151,7 @@
 				<key>runningsubtext</key>
 				<string>converting ...</string>
 				<key>script</key>
-				<string>python convertNumber.py {query} 2&gt;&amp;1 | tee nsc.log</string>
+				<string>python3 convertNumber.py {query} 2&gt;&amp;1 | tee nsc.log</string>
 				<key>subtext</key>
 				<string>convert number to other system</string>
 				<key>title</key>
@@ -174,11 +174,11 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>binary</string>
+				<string>bin</string>
 				<key>runningsubtext</key>
 				<string>converting ...</string>
 				<key>script</key>
-				<string>python convertBinary.py {query} 2&gt;&amp;1 | tee nsc.log</string>
+				<string>python3 convertBinary.py {query} 2&gt;&amp;1 | tee nsc.log</string>
 				<key>subtext</key>
 				<string>Type any binary number</string>
 				<key>title</key>
@@ -205,7 +205,7 @@
 				<key>runningsubtext</key>
 				<string>converting ...</string>
 				<key>script</key>
-				<string>python convertHex.py {query} 2&gt;&amp;1 | tee nsc.log</string>
+				<string>python3 convertHex.py {query} 2&gt;&amp;1 | tee nsc.log</string>
 				<key>subtext</key>
 				<string>Type any hexadecimal number</string>
 				<key>title</key>
@@ -251,11 +251,11 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>decimal</string>
+				<string>dec</string>
 				<key>runningsubtext</key>
 				<string>converting ...</string>
 				<key>script</key>
-				<string>python convertDecimal.py {query} 2&gt;&amp;1 | tee nsc.log</string>
+				<string>python3 convertDecimal.py {query} 2&gt;&amp;1 | tee nsc.log</string>
 				<key>subtext</key>
 				<string>Type any decimal number</string>
 				<key>title</key>

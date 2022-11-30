@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from xml.etree import ElementTree as ET
 import copy
 import random
 import alp.core as core
+import json
 
 
 class Item(object):
@@ -55,36 +55,42 @@ class Item(object):
         return data
 
 def feedback(items):
-    feedback = ET.Element("items")
     
     def processItem(item):
-        itemToAdd = ET.SubElement(feedback, "item")
+        json_item = {}
 
         data = item.get()
 
-        for (k, v) in data["attrib"].iteritems():
+        for (k, v) in data["attrib"].items():
             if v is None:
                 continue
-            itemToAdd.set(k, v)
+            json_item[k] = v
 
-        for (k, v) in data["content"].iteritems():
+        for (k, v) in data["content"].items():
             if v is None:
                 continue
             if k != "fileIcon" and k != "fileType":
-                child = ET.SubElement(itemToAdd, k)
-                child.text = v
+                json_item[k] = v
             if k == "icon":
+                icon_item = {}
                 if "fileIcon" in data["content"].keys():
                     if data["content"]["fileIcon"] == True:
-                        child.set("type", "fileicon")
+                        icon_item["type"] = "fileicon"
                 if "fileType" in data["content"].keys():
                     if data["content"]["fileType"] == True:
-                        child.set("type", "filetype")
+                        icon_item["type"] = "filetype"
+        return json_item
 
+    final_items = {}
+    items_array = []
     if isinstance(items, list):
         for anItem in items:
-            processItem(anItem)
+            final_item = processItem(anItem)
+            items_array.append(final_item)
     else:
-        processItem(items)
+        final_item = processItem(items)
+        items_array.append(final_item)
 
-    print ET.tostring(feedback, encoding="utf-8")
+    final_items["items"] = items_array
+
+    print(json.dumps(final_items))
